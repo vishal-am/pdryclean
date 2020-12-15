@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.wrapper{
+  width: 100%;
+  display: flex;
+}
+
+/* sidebar Css */
+.sidebar{
+  width: 220px;
+  height: 100vh;
+  background-color:honeydew
+}
+.mainContent{
+  background-color:darkgrey;
+
+  width:  calc(100% - 220px)
+}

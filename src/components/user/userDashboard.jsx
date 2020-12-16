@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 
 class userDashboard extends Component {
-    state = {  }
+	state = {  }
+	
+	redirect =(event)=>{
+		console.log(event.target.name)
+		window.location.href = '#' + event.target.name
+	}
     render() { 
+
         return ( 
             <div className='' style={{ 
-					display: '-ms-inline-flexbox'
+					display: '-ms-inline-flexbox',
+					textAlign:'center'
 				}}>
 					<h3 style={{
 						textAlign: "center",
@@ -15,7 +23,10 @@ class userDashboard extends Component {
 						fontFamily: 'Montserrat',
 					}}>
 						Welcome, User
+						
             </h3>
+					<button onClick={this.redirect} name='give' className='btn btn-warning text-white m-1 btn-sm'>Give</button> & 
+			<button  onClick={this.redirect} name='take' className='btn btn-danger m-1 btn-sm'>Take</button>
 					
 				</div>
          );

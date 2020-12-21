@@ -8,7 +8,7 @@ import {matchSorter} from 'match-sorter'
 
 
 
-class table extends Component {
+class Logs extends Component {
     state = { 
         data:{}
      }
@@ -135,4 +135,4 @@ class table extends Component {
     }
 }
  
-export default table;
+export default Logs;

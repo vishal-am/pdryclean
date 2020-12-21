@@ -8,7 +8,7 @@ import {matchSorter} from 'match-sorter'
 
 
 
-class table extends Component {
+class Hotel extends Component {
     state = { 
         data:{}
      }
@@ -90,12 +90,12 @@ class table extends Component {
           };
           
         return ( <div className=''>
-            <DataTable title ='Users'
+            <DataTable 
+            // title ='Users'
              columns = {columns} 
              data ={this.state.data}
             //  selectableRows
              striped
-
              pagination 
              responsive      
              selectableRowsHighlight
@@ -111,6 +111,7 @@ class table extends Component {
              subHeaderComponent ={
                  <div>
                  <div className="d-flex">
+                    <h2 className="float-left">Hotels</h2>
                   <Form.Group className="mb-0" sm='11'>
                     <Form.Control 
                       name='searchString' 
@@ -135,4 +136,4 @@ class table extends Component {
     }
 }
  
-export default table;
+export default Hotel;

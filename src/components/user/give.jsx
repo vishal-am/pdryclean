@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Form,Button, Container, Row,Col} from 'react-bootstrap'
 import axios from 'axios'
-
+import config from '../../env/config'
 
 class Give extends Component {
     state = { 
@@ -10,7 +10,7 @@ class Give extends Component {
 
   componentDidMount=()=>{
     axios.post("http://estapi.amwebtech.org/salesestimation/api/manager/region/get",{
-      "token":"49b03e16f6dbc9b5d4bcf0ecde26a4c2"
+      "token":config.currentUser.token
     }).then(res=>{
       if(res.status===200){
         // console.log(res.data.data)
@@ -36,7 +36,7 @@ class Give extends Component {
   
      render() { 
       const data =  this.state.data
-      console.log(this.state)
+      console.log(config.currentUser.token)
         return ( <Container fluid>    
         
         <Row className="center mb-5" >

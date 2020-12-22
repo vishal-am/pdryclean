@@ -147,6 +147,7 @@ class Hotel extends Component {
               paddingRight: '8px',
               backgroundColor:'lightblue',
               fontSize:'1.1rem'
+              
 
             },
           },
@@ -157,20 +158,7 @@ class Hotel extends Component {
             },
           },
         };
-        const columns2 = [
-          {
-            name: 'Title',
-            sortable: true,
-            cell: row => <div><div style={{ fontWeight: 700 }}>{row.title}</div>{row.summary}</div>,
-   
-          },
-          {
-            name: 'Year',
-            selector: 'year',
-            sortable: true,
-            right: true,
-          },
-        ];
+       
           
         const data=this.state.data
         return ( 

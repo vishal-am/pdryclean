@@ -41,16 +41,11 @@ class Home extends Component {
                     <div  style={{ fontFamily: 'Montserrat' }}>
                             
 								<Row className=' m-0'>
-								<Col
-								lg={2}  className=''
-								// style={{
-								// 	backgroundColor:'#343a40'
-								// }}
-								>
+								{/* <Col
+								lg={2}  className=' border border-danger'>
 								asdfasdfasdf
-									{/* col 3<div className='border border-danger'></div> */}
-								</Col>
-									<Col className='p-0' lg={10}>
+								</Col> */}
+									<Col className='p-0' >
 									<ContentArea/>
 									</Col>
 								</Row>

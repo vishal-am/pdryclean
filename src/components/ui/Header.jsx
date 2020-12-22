@@ -34,8 +34,11 @@ class Header extends Component {
               <Nav.Link eventKey={4} href="#logs">
                 Logs
               </Nav.Link>
-              <Nav.Link  onClick={this.handleLogout}>
+              <Nav.Link onClick={this.handleLogout}>
                 Logout
+              </Nav.Link>
+              <Nav.Link  eventKey={5} href='#give'>
+                Give & Take
               </Nav.Link>
               {/* <NavDropdown
                title="Dropdown" id="collasible-nav-dropdown">

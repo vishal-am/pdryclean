@@ -75,16 +75,16 @@ class table extends Component {
             },
             headCells: {
               style: {
-                // paddingLeft: '8px', // override the cell padding for head cells
-                // paddingRight: '8px',
+                paddingLeft: '8px', // override the cell padding for head cells
+                paddingRight: '8px',
                 backgroundColor:'lightblue'
 
               },
             },
             cells: {
               style: {
-                paddingLeft: '8px', // override the cell padding for data cells
-                paddingRight: '8px',
+                // paddingLeft: '8px', // override the cell padding for data cells
+                // paddingRight: '8px',
               },
             },
           };

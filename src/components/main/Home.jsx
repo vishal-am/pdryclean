@@ -5,6 +5,7 @@ import { HashRouter } from 'react-router-dom';
 // import Switch from 'react-bootstrap/esm/Switch';
 import DataContext from '../context/DataContext'
 import ContentArea from './ContentArea';
+import {Row, Col} from 'react-bootstrap'
 
 class Home extends Component {
 	state = {
@@ -38,7 +39,22 @@ class Home extends Component {
             <HashRouter>
                 <Head/>
                     <div  style={{ fontFamily: 'Montserrat' }}>
-                            <ContentArea/>
+                            
+								<Row className=' m-0'>
+								<Col
+								lg={2}  className=''
+								// style={{
+								// 	backgroundColor:'#343a40'
+								// }}
+								>
+								asdfasdfasdf
+									{/* col 3<div className='border border-danger'></div> */}
+								</Col>
+									<Col className='p-0' lg={10}>
+									<ContentArea/>
+									</Col>
+								</Row>
+							
                     </div>
             </HashRouter>
 		);

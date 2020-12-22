@@ -17,14 +17,16 @@ class Give extends Component {
         const ress = res.data.data
         this.setState({
         data:ress,
-        data2:ress
       })
           }
           }
       ).catch(err=>{
           console.log(err)
       })
+    const date = new Date()
+    this.setState({todayDate:date})
   }
+
   handleSelect = async ({ currentTarget: input }) => {
     await this.setState({
       [input.name]: input.value,
@@ -75,7 +77,7 @@ class Give extends Component {
                 <Form.Group as={Col} sm={12} lg={12}>
                   <Form.Label className="text-muted">Today's Date</Form.Label>
                   <Form.Control
-                    value={new Date()}
+                    value={this.state.todayDate}
                     name="date"
                     disabled
                   >

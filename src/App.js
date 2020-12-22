@@ -18,9 +18,6 @@ import DataContext from '../src/components/context/DataContext'
 //Config import 
 import config from '../src/env/config'
 
-
-
-
 class App extends Component {
 
   state = { 

@@ -90,8 +90,7 @@ class Hotel extends Component {
           };
           
         return ( <div className=''>
-            <DataTable 
-            // title ='Users'
+            <DataTable title ='Users'
              columns = {columns} 
              data ={this.state.data}
             //  selectableRows
@@ -109,29 +108,21 @@ class Hotel extends Component {
              subHeader 
              customStyles ={customStyles}
              subHeaderComponent ={
-                 <div>
-                 <div className="d-flex">
-                    <h2 className="float-left">Hotels</h2>
-                  <Form.Group className="mb-0" sm='11'>
-                    <Form.Control 
-                      name='searchString' 
-                value ={this.state.searchString} 
-                placeholder ='Search Here..' 
-                onChange={this.handleSelect}
-                    />
-                  </Form.Group>
-                 
-
-                  <Button className=" btn-sm ml-3" >
-                    <FaPlus className='mr-2 mb-1' />
-                    Add New
-                  </Button>
-                </div>
-                    
-
-
-                 </div>
-             }  />
+                <div>
+                  <div className="d-flex">
+                    <Form.Group className="mb-0" sm='11'>
+                      <Form.Control 
+                        name='searchString' 
+                        value ={this.state.searchString} 
+                        placeholder ='Search Here..' 
+                        onChange={this.handleSelect}/>
+                      </Form.Group>
+                    <Button className=" btn-sm ml-3" >
+                      <FaPlus className='mr-2 mb-1' />
+                      Add New
+                    </Button>
+                  </div>
+                </div>}  />
         </div> );
     }
 }

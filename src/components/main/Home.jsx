@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import Head from '../ui/Header'
 import { HashRouter } from 'react-router-dom';
 // import Switch from 'react-bootstrap/esm/Switch';
-import config from '../../env/config';
 import DataContext from '../context/DataContext'
 import ContentArea from './ContentArea';
 

@@ -46,7 +46,7 @@ class ContentArea extends Component {
             <Route exact path={"/hotels"} component={Number(usertype) === 1 ? Hotels: <Redirect to='/'/>}/>
             <Route exact path={"/products"} component={Number(usertype) === 1 ? Products: <Redirect to='/'/>}/>
             <Route exact path={'/logs'} component={Number(usertype) === 1 ? Logs: <Redirect to='/'/>}/>
-
+            <Route exact path={'/logs/:id'} component={Number(usertype) === 1 ? Logs: <Redirect to='/'/>} />
 
             {/* User Routes */}
 

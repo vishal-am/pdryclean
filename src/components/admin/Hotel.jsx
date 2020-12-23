@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import DataTable from 'react-data-table-component'
+import DataTable ,{defaultThemes} from 'react-data-table-component'
 import axios from 'axios';
-import {Button,Modal,Col,Form} from 'react-bootstrap'
+import {Button,Modal,Col,Form,NavDropdown} from 'react-bootstrap'
 import {FaPlus,FaTrashAlt,FaEdit,FaTable} from 'react-icons/fa'
 import {matchSorter} from 'match-sorter'
 
@@ -87,11 +87,12 @@ class Hotel extends Component {
 
         const columns = [
             {
-              name: 'Hotel Id',
+              name: 'S.No',
               selector: 'id',
               sortable: true,
-              minWidth:'1',
-              maxWidth:'3'
+              // minWidth:'1px',
+              maxWidth:'12px',
+              // center:true,
               // compact:true,
               // right:true,
               // wrap:true
@@ -109,7 +110,7 @@ class Hotel extends Component {
                 name: 'Email',
                 selector: 'email',
                 sortable:true,
-                wrap:true
+                // wrap:true
             },
             {
               name: 'Website',
@@ -124,10 +125,17 @@ class Hotel extends Component {
               // maxWidth:'300',
                 // name: 'Update-Delete',
                 button: true,
+                maxWidth:'12px',
                 cell: (row) => 
                 <div>  
                  <Button size='sm' className='m-1' onClick={()=>this.updateRowClick(row)}><FaEdit className='pb-1'/></Button>
                  <Button size='sm' variant='danger' className='m-1' onClick={()=>this.deleteRowClick(row)} ><FaTrashAlt className='pb-1'/></Button>
+                 {/* <NavDropdown title="" id="nav-dropdown">
+        <NavDropdown.Item eventKey="4.1">Action</NavDropdown.Item>
+        <NavDropdown.Item eventKey="4.2">Another action</NavDropdown.Item>
+        <NavDropdown.Item eventKey="4.3">Something </NavDropdown.Item>
+        
+      </NavDropdown> */}
                 </div>
                 
             }
@@ -136,6 +144,18 @@ class Hotel extends Component {
         ];
         const customStyles = {
          
+          headRow: {
+            style: {
+              borderTopStyle: 'solid',
+              borderTopWidth: '1px',
+              borderTopColor: defaultThemes.default.divider.default,
+            },
+          },
+          header: {
+            style: {
+              minHeight: '56px',
+            },
+          },
           rows: {
             style: {
               // backgroundColor:'lightgreen'
@@ -146,7 +166,8 @@ class Hotel extends Component {
               paddingLeft: '8px', // override the cell padding for head cells
               paddingRight: '8px',
               backgroundColor:'lightblue',
-              fontSize:'1.1rem'
+              fontSize:'1.1rem',
+              // margin:'5px'
               
 
             },
@@ -164,7 +185,7 @@ class Hotel extends Component {
         return ( 
         <div className=''>
 
-          <Modal centered show={this.state.addUpdateModal} size='sm' onHide={this.handleAddUpdateClose}>
+          <Modal animation={false} centered show={this.state.addUpdateModal} size='sm' onHide={this.handleAddUpdateClose}>
             <Modal.Header closeButton>
               <Modal.Title>Add or Update</Modal.Title>
             </Modal.Header>
@@ -217,7 +238,7 @@ class Hotel extends Component {
            
           </Modal>
 
-          <Modal centered show={this.state.deleteModal} size='sm' onHide={this.handleDeleteClose}>
+          <Modal animation={false} centered show={this.state.deleteModal} size='sm' onHide={this.handleDeleteClose}>
             <Modal.Header closeButton>
               <Modal.Title>Confirmation</Modal.Title>
             </Modal.Header>
@@ -251,10 +272,7 @@ class Hotel extends Component {
              fixedHeader
              subHeader 
              customStyles ={customStyles}
-        //      expandableRows
-        // expandableRowsComponent={
-        //   <div>hey</div>
-        // }
+            //  expandableRows
              subHeaderComponent ={<div>
                   <div className="d-flex">
                     <Form.Group className="mb-0" sm='11'>
